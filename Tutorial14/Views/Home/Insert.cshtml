@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insert a new member</h2>
+
+<form action="/Home/DoInsert" method="post" class="w-50">
+    <div class="form-group mb-3">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="Club">Club Name</label>
+        <input type="text" class="form-control" id="Club" name="Club" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="Age">Age</label>
+        <input type="number" class="form-control" id="Age" name="Age" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="Fee">Fee</label>
+        <input type="number" step="0.01" class="form-control" id="Fee" name="Fee" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+

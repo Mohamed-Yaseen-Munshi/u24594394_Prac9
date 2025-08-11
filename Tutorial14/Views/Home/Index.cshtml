@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    @if (!String.IsNullOrEmpty(ViewBag.Message))
+    {
+        <strong>@ViewBag.Message</strong>
+    }
+    else
+    {
+        <h1>Social Club Membership Campaign !!</h1>
+        <p class="lead">This web interface allows a prospective member to join a social club, switch club membership, and change membership status as desired. All changes are stored in a database</p>
+    }
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Insert</h2>
+        <p>
+            When this button is clicked then a random name will be inserted into the database.
+        </p>
+        <p>@Html.ActionLink("New Membership", "Insert", "Home", new { area = "" }, new { @class = "btn btn-primary" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Update</h2>
+        <p>
+            When this button is clicked then a random existing name in the database will be replaced with another random name.
+        </p>
+        <p>@Html.ActionLink("Update Membership", "Update", "Home", new { area = "" }, new { @class = "btn btn-warning" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Delete</h2>
+        <p>
+            When this button is clicked then a random name from the database will be deleted.
+        </p>
+        <p>@Html.ActionLink("Terminate Membership", "Delete", "Home", new { area = "" }, new { @class = "btn btn-danger" })</p>
+    </div>
+</div>
